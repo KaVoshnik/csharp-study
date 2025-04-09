@@ -1,17 +1,102 @@
-# This is ReadMe for it guide
+# Это ридми файл к гайду
 
-For compile csharp code use this:
+## 1. Компиляция с mono
 
->> You need mono for use this.
+Для того что бы скомпилировать C# код на Linux используйте mono:
+
+> Для того что бы работала компиляция из примера вам нужно установить mono(См. пункт 3).
 
 ```bash
 mcs FileName.cs
 ```
 
-For run compile file use this:
+> Для запуска файла после компиляции используйте:
 
 ```bash
 mono FileName.exe
 ```
 
->> P.S. You can run use this method in Linux, it work)
+## 2. Компиляция с .NET
+
+Для того что бы скомпилировать C# код на Linux/Windows используйте .NET
+
+> Для того что бы работала компиляция из примера вам нужно установить .NET(См. пункт 4).
+
+### Linux
+
+1. Скомпилируйте файл:
+
+```bash
+dotnet build FileName.cs -o ./output
+```
+
+2. Запустите скомпилированный файл:
+
+```bash
+dotnet ./output/FileName.dll
+```
+
+### Windows
+
+
+## 3. Установка mono
+
+### Arch linux
+
+1. Обновите систему:
+
+```bash
+sudo pacman -Syu
+```
+
+2. Установите Mono:
+
+```bash
+sudo pacman -S mono
+```
+
+3. Проверьте установку(Не обязательно)
+
+```bash
+mono --version
+```
+
+## 4. Установка .NET
+
+### Arch linux
+
+1. Обновите систему:
+
+```bash
+sudo pacman -Syu
+```
+
+2. Установите .NET SDK:
+
+```bash
+sudo pacman -S dotnet-sdk
+```
+
+3. Проверьте установку(Не обязательно)
+
+```bash
+dotnet --version
+```
+
+### Windows
+
+1. Откройте веб-браузер и перейдите к https://dotnethttps://dotnet.microsoft.com/download/dotnet.
+
+2. Выберите версию .NET, которую вы хотите скачать, например 9.0.
+
+3. Найдите пакет SDK или поле среды выполнения, содержащее ссылки для скачивания .NET.
+
+4. В столбце установщиков найдите строку Windows и выберите ссылку для архитектуры ЦП. Если вы не уверены, выберите x64 , так как это наиболее распространено.
+
+5. Откройте проводник Windows и перейдите к месту скачивания файла, скорее всего, папку downloads .
+
+6. Дважды щелкните файл, чтобы установить .NET.
+
+7. Выберите " Установить " и следуйте инструкциям по установке .NET.
+
+> Гайд для Windows был взят с оффициального сайта Microsoft.

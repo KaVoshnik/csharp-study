@@ -1,7 +1,7 @@
 using System;
 
-namespace types {
-    class Types {
+namespace Types {
+    class Program {
         static void Main() {
             float f = 2.95f; // float для числа с точкой, отличается от double тем что float занимает меньше памяти, так же обязательна запись буквы f после числа, например 2.95f
             double d = 2.32; // double для числа с плавающей точкой используется для точности, возможна запись как 2.32 или 2.32d
